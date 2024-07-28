@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* You can define a CSS class for the specific font */
+.font-edu-hand {
+  font-family: 'Edu AU VIC WA NT Hand', cursive;
+}
+

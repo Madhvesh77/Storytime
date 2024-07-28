@@ -5,6 +5,7 @@ import Lenis from '@studio-freight/lenis'
 import opening from "../../public/Opening.png"
 import { useScroll, useTransform, motion, animate } from 'framer-motion';
 import Image from 'next/image';
+import './globals.css';
 
 export default function Home() {
 
@@ -45,10 +46,10 @@ export default function Home() {
             />
             </motion.div>
             <motion.div className="absolute inset-0 flex justify-center items-center" style={{ opacity }}>
-              <h1 className="text-white">Hello</h1>
+              <h1 className="text-white font-edu-hand">Hello</h1>
             </motion.div>
             <motion.div className="absolute inset-0 flex justify-center items-center" style={{ opacity: newDivOpacity }}>
-              <h1 className="text-white">Welcome</h1>
+              <h1 className="text-white font-edu-hand">Welcome</h1>
             </motion.div>
           </motion.div>
           {/* </div> */}
