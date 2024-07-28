@@ -55,8 +55,8 @@ export default function ZoomParallax() {
     ]
 
     return (
-        <div role="outerdiv" ref={container} className="h-[255vh] relative">
-            <div role="ssticky" className="sticky top-0 h-full overflow-hidden">
+        <div role="outerdiv" ref={container} className="h-[300vh] relative">
+            <div role="ssticky" className="sticky top-0 h-full">
                 {pictures.map(({ src, scale }, index) => (
                     <motion.div
                         key={index}
