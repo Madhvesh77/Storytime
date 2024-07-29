@@ -1,3 +1,4 @@
+'use client'
 import Picture1 from '../../../public/logo192.png';
 import Picture2 from '../../../public/logo192.png';
 import Picture3 from '../../../public/logo192.png';
@@ -55,7 +56,9 @@ export default function ZoomParallax() {
     ]
 
     return (
-        <div role="outerdiv" ref={container} className="h-[300vh] relative">
+        <>
+        <div className="bg-white h-[100vh]"></div>
+        <div role="outerdiv" ref={container} className="top-0 h-[150vh] relative">
             <div role="ssticky" className="sticky top-0 h-full">
                 {pictures.map(({ src, scale }, index) => (
                     <motion.div
@@ -88,6 +91,6 @@ export default function ZoomParallax() {
                 ))}
             </div>
         </div>
-
+        </>
     )
 }
