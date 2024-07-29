@@ -21,7 +21,6 @@ export default function Home() {
   }, [])
 
   const container = useRef(null);
-  // const { scrollYProgress } = useScroll();
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -29,31 +28,32 @@ export default function Home() {
   })
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const newDivOpacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const plotDivOpacity= useTransform(scrollYProgress, [0.9, 1], [1, 0.0001]);
 
   return (
     <main className=" mb-[100vh]">
       <div ref={container} className="flex justify-center font-semibold text-9xl h-[200vh]">
         <div className="sticky top-0 h-[100vh] bg-black overflow-hidden">
-          {/* <div className=" absolute top-0"> */}
           <motion.div style={{ scale }} className="relative h-[100vh]">
             <motion.div style={{ opacity }}>
-            <Image
-              src={opening}
-              alt="opening-image"
-              className="h-full w-full object-cover"
-            />
+              <Image
+                src={opening}
+                alt="opening-image"
+                className="h-full w-full object-cover"
+              />
             </motion.div>
             <motion.div className="absolute inset-0 flex justify-center items-center" style={{ opacity }}>
-              <h1 className="text-white font-edu-hand">Hello</h1>
+              <h1 className="text-white font-edu-hand">Title Card</h1>
             </motion.div>
-            <motion.div className="absolute inset-0 flex justify-center items-center flex-col" style={{ opacity: newDivOpacity }}>
-              <h1 className="text-white font-edu-hand text-3xl">Welcome</h1>
-              <p className="font-edu-hand text-sm p-4 max-w-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?</p>
+            <motion.div className="sticky inset-0 flex justify-center items-center flex-col h-[100vh]" style={{ opacity: newDivOpacity }}>
+              <motion.div style={{opacity: plotDivOpacity}}>
+                <h1 className="text-white font-edu-hand text-3xl">The Plot</h1>
+                <p className="font-edu-hand text-sm p-4 max-w-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?</p>
+                </motion.div>
             </motion.div>
           </motion.div>
-          {/* </div> */}
         </div>
       </div>
       {/* <ZoomParallax /> */}
