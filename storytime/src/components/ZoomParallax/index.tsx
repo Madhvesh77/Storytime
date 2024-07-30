@@ -57,7 +57,6 @@ export default function ZoomParallax() {
 
     return (
         <>
-        <div className="bg-white h-[100vh]"></div>
         <div role="outerdiv" ref={container} className="top-0 h-[150vh] relative">
             <div role="ssticky" className="sticky top-0 h-full">
                 {pictures.map(({ src, scale }, index) => (

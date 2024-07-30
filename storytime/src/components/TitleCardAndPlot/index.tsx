@@ -1,10 +1,9 @@
 'use client'
 import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis'
-import opening from "../../../public/Opening.png"
 import { useScroll, useTransform, motion, animate } from 'framer-motion';
 import Image from 'next/image';
-export default function TitleCardAndPlot() {
+export default function TitleCardAndPlot({image, paragraph}:{image: any; paragraph: string}) {
 
     useEffect(() => {
         const lenis = new Lenis()
@@ -36,7 +35,7 @@ export default function TitleCardAndPlot() {
           <motion.div style={{ scale: bgImageZoom }} className="relative h-[100vh]">
             <motion.div style={{ opacity: bgImageOpacity }}>
               <Image
-                src={opening}
+                src={image}
                 alt="opening-image"
                 className="h-full w-full object-cover"
               />
@@ -47,7 +46,7 @@ export default function TitleCardAndPlot() {
             <motion.div className="sticky inset-0 flex justify-center items-center flex-col h-[100vh]" style={{ opacity: plotDivAppearOpacity }}>
               {/* <motion.div style={{opacity: plotDivDisappearOpacity}}> */}
                 <h1 className="text-white font-edu-hand text-3xl">The Plot</h1>
-                <p className="font-edu-hand text-sm p-4 max-w-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?</p>
+                <p className="font-edu-hand text-sm p-4 max-w-md text-center">{paragraph}</p>
                 {/* </motion.div> */}
             </motion.div>
           </motion.div>
