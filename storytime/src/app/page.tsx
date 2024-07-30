@@ -29,7 +29,6 @@ export default function Home() {
           />
         </motion.div>
       </div>
-      {/* <TitleCardAndPlot/> */}
       <ZoomParallax />
     </main>
   )
