@@ -27,7 +27,6 @@ export default function TitleCardAndPlot({image, paragraph}:{image: any; paragra
       const bgImageOpacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
       const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
       const plotDivAppearOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-    //   const plotDivDisappearOpacity= useTransform(scrollYProgress, [0.5, 1], [1, 0]);
 
     return (
         <div ref={container} className="flex justify-center font-semibold text-9xl h-[200vh] -mb-0">
@@ -44,10 +43,8 @@ export default function TitleCardAndPlot({image, paragraph}:{image: any; paragra
               <h1 className="text-white font-edu-hand">Title Card</h1>
             </motion.div>
             <motion.div className="sticky inset-0 flex justify-center items-center flex-col h-[100vh]" style={{ opacity: plotDivAppearOpacity }}>
-              {/* <motion.div style={{opacity: plotDivDisappearOpacity}}> */}
                 <h1 className="text-white font-edu-hand text-3xl">The Plot</h1>
-                <p className="font-edu-hand text-sm p-4 max-w-md text-center">{paragraph}</p>
-                {/* </motion.div> */}
+                <p className="font-edu-hand text-sm p-4 max-w-md text-center mb-40">{paragraph}</p>
             </motion.div>
           </motion.div>
         </div>
