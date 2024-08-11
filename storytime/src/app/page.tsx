@@ -63,30 +63,30 @@ export default function Home() {
               style={{ scale: revOpacity }}
             >
               <div className="relative w-[200vh] h-full">
-              <motion.div
-                className="absolute flex flex-row w-[200vh] h-full bg-red-400"
-                style={{x: moveLeft}}
-              >
-                <Image
-                  src={war}
-                  alt="war"
-                  className="w-full h-[95%]"
-                />
-                <Image
-                  src={war}
-                  alt="war"
-                  className="w-full h-[95%]"
-                />
-                <Image
-                  src={war}
-                  alt="war"
-                  className="w-full h-[95%]"
-                />
-              </motion.div>
+                <motion.div
+                  className="absolute flex flex-row w-[200vh] h-full bg-red-400"
+                  style={{ x: moveLeft }}
+                >
+                  <Image
+                    src={war}
+                    alt="war"
+                    className="w-full h-[95%]"
+                  />
+                  <Image
+                    src={war}
+                    alt="war"
+                    className="w-full h-[95%]"
+                  />
+                  <Image
+                    src={war}
+                    alt="war"
+                    className="w-full h-[95%]"
+                  />
+                </motion.div>
                 <p className="absolute font-edu-hand text-lg flex justify-center w-[90vh] inset-[50vh]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem soluta esse aliquid vitae quam, ex, ipsum ratione, nostrum illo voluptatibus commodi saepe sint mollitia vero tenetur ut quod animi tempore.</p>
               </div>
             </motion.div>
-            
+
 
           </motion.div>
         </div>
