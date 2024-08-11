@@ -2,7 +2,7 @@
 import TitleCardAndPlot from "@/components/TitleCardAndPlot";
 import { motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import black from "../../public/BlackBase.png";
 import leftHill from "../../public/Hill4Black.png";
 import rightHill from "../../public/Hill5Black.png";
@@ -10,6 +10,7 @@ import leaf from "../../public/LeafBlack.png";
 import opening from "../../public/Opening.png";
 import sun from "../../public/SunsetBg.jpeg";
 import children from "../../public/SunsetChildren.png";
+import { Dialog } from 'primereact/dialog';
 
 export default function Home() {
   const plot = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?"
@@ -18,8 +19,20 @@ export default function Home() {
 
   const sunOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const leafXProgress = useTransform(scrollYProgress, [0, 2], [0, window.innerWidth - 100]);
+  const [isDialogOpen, setIsDialogOpen] = useState(false); 
+
+  const handleClick = (()=> {
+    setIsDialogOpen(true);
+  })
   return (
     <main className=" mb-[100vh]">
+      <button
+        onClick={handleClick}
+        className="fixed ml-[96%] mt-[55%] z-50 w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg flex items-center justify-center"
+      >
+        +
+      </button>
+      <Dialog header="" visible={isDialogOpen} style={{ width: '50vw' }} onHide={() => setIsDialogOpen(false)}><p>Hi</p></Dialog>
       <TitleCardAndPlot image={opening} paragraph={plot} />
 
       <div className="h-[100vh] bg-white">
