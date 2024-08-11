@@ -1,21 +1,15 @@
 'use client'
 import TitleCardAndPlot from "@/components/TitleCardAndPlot";
-import ZoomParallax from "@/components/ZoomParallax";
-import opening from "../../public/Opening.png"
-import sun from "../../public/SunsetBg.jpeg"
-import leftHill from "../../public/Hill4Black.png"
-import black from "../../public/BlackBase.png"
-import rightHill from "../../public/Hill5Black.png"
-import leaf from "../../public/LeafBlack.png"
-import children from "../../public/SunsetChildren.png"
-import smallImage from "../../public/sunset.webp"
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
-import ParallaxLayeredEffect from "@/components/ParallaxLayeredEffect";
-import LoopAnimation from "@/components/LoopAnimation";
-import SphericalRevolvingImages from "@/components/SphericalRevolvingImages";
-import MiddlePictureParallax from "@/components/MiddlePictureParallax";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import black from "../../public/BlackBase.png";
+import leftHill from "../../public/Hill4Black.png";
+import rightHill from "../../public/Hill5Black.png";
+import leaf from "../../public/LeafBlack.png";
+import opening from "../../public/Opening.png";
+import sun from "../../public/SunsetBg.jpeg";
+import children from "../../public/SunsetChildren.png";
 
 export default function Home() {
   const plot = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?"
