@@ -16,24 +16,8 @@ export default function Home() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-
-  const inView = useInView(ref, { once: false });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ x: 0, opacity: 1 });
-    } else {
-      controls.start({ x: -200, opacity: 0 });
-    }
-  }, [inView, controls]);
-
   const sunOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const leafXProgress = useTransform(scrollYProgress, [0, 2], [0, window.innerWidth - 100]);
-  const sunScale = useTransform(scrollYProgress, [0, 1], [1, 2]);
-
-  const manX = useTransform(scrollYProgress, [0, 0.5], ["-100%", "50%"]);
-  const treeX = useTransform(scrollYProgress, [0, 0.5], ["100%", "80%"]);
   return (
     <main className=" mb-[100vh]">
       <TitleCardAndPlot image={opening} paragraph={plot} />
