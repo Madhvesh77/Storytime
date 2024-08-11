@@ -9,7 +9,7 @@ import black from "../../public/BlackBase.png";
 import leftHill from "../../public/Hill4Black.png";
 import rightHill from "../../public/Hill5Black.png";
 import leaf from "../../public/LeafBlack.png";
-import map from "../../public/Map.jpg";
+import map from "../../public/Map.png";
 import opening from "../../public/Opening.png";
 import sun from "../../public/SunsetBg.jpeg";
 import children from "../../public/SunsetChildren.png";
@@ -31,16 +31,20 @@ export default function Home() {
       <Button
         visible={!isDialogOpen}
         onClick={handleClick}
-        className="fixed ml-[96%] mt-[55%] z-50 w-12 h-12 bg-transparent text-white rounded-full shadow-lg flex items-center justify-center"
+        className="fixed ml-[95%] mt-[55%] z-50 w-12 h-12 bg-transparent text-white rounded-full shadow-lg flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125"
       >
         <Image 
         src={map}
-        alt="map-icon"/>
+        alt="map-icon"
+        />
       </Button>
       <Dialog header="" visible={isDialogOpen} style={{ width: '50vw' }} onHide={() => setIsDialogOpen(false)}>
+        <div >
         <Image
           src={map}
-          alt="map" />
+          alt="map"
+          className="w-full h-full" />
+        </div>
       </Dialog>
       <TitleCardAndPlot image={opening} paragraph={plot} />
 
