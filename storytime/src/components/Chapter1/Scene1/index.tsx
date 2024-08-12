@@ -4,7 +4,8 @@ import black from "../../../../public/BlackBase.png";
 import leftHill from "../../../../public/Hill4Black.png";
 import rightHill from "../../../../public/Hill5Black.png";
 import leaf from "../../../../public/LeafBlack.png";
-import sun from "../../../../public/SunsetBg.jpeg";
+import sunsetBg from "../../../../public/SunsetBgNoSun.jpeg";
+import sun from "../../../../public/Sun2.png";
 import children from "../../../../public/SunsetChildren.png";
 import { useRef } from "react";
 export default function Scene1() {
@@ -19,11 +20,18 @@ export default function Scene1() {
                 <motion.div className='bg-black h-full relative'>
                     <motion.div ref={ref} className="w-full h-full absolute" style={{ opacity: sunOpacity }} >
                         <Image
-                            src={sun}
+                            src={sunsetBg}
                             alt="Sun"
                             className="w-full h-full object-cover" />
                     </motion.div>
-                    <motion.div ref={ref} className="w-[50%] ml-[41vh] py-[36vh] absolute" style={{ y: leafXProgress }}>
+                    <motion.div ref={ref} className="w-[80%] ml-[12%] py-[7%] absolute" style={{ opacity: sunOpacity }} >
+                        <Image
+                            src={sun}
+                            alt="Sun"
+                            className="w-full h-full object-cover"
+                         />
+                    </motion.div>
+                    <motion.div ref={ref} className="w-[50%] ml-[29%] py-[22%] absolute" style={{ y: leafXProgress }}>
                         <Image
                             src={children}
                             alt="children"
@@ -39,7 +47,7 @@ export default function Scene1() {
                             src={rightHill}
                             alt="righthill" />
                     </motion.div>
-                    <motion.div ref={ref} className="w-full absolute py-[74vh]">
+                    <motion.div ref={ref} className="w-full absolute py-[45%]">
                         <Image
                             src={black}
                             alt="black"
