@@ -21,7 +21,7 @@ export default function Scene1() {
                         <Image
                             src={sun}
                             alt="Sun"
-                            className="w-full h-full" />
+                            className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div ref={ref} className="w-[50%] ml-[41vh] py-[36vh] absolute" style={{ y: leafXProgress }}>
                         <Image
