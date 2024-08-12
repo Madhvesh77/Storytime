@@ -21,7 +21,7 @@ export default function Home() {
       <Button
         visible={!isDialogOpen}
         onClick={handleClick}
-        className="fixed ml-[95%] mt-[55%] z-50 w-12 h-12 bg-transparent text-white rounded-full shadow-lg flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125"
+        className="fixed right-4 bottom-4 md:ml-[95%] md:mt-[55%] z-50 w-12 h-12 bg-transparent text-white rounded-full shadow-lg flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125"
       >
         <Image
           src={map}
