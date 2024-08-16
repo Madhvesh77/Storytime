@@ -5,6 +5,7 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { useRef, useState } from "react";
 import map from "../../public/Map.png";
+import girl from "../../public/GirlBlur.png";
 import opening from "../../public/Opening.png";
 import Scene1 from "@/components/Chapter1/Scene1";
 import Scene2 from "@/components/Chapter1/Scene2";
@@ -21,7 +22,8 @@ export default function Home() {
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const opacity = useTransform(scrollYProgress, [0.3, 1], [0, 2]);
+  const opacity = useTransform(scrollYProgress, [0.3, 0.7, 1], [0, 0.5, 0]);
+  const textOpacity = useTransform(scrollYProgress, [0.3, 0.7, 1], [0, 2, 0]);
 
   return (
     <main className=" mb-[100vh]">
@@ -57,8 +59,25 @@ export default function Home() {
             Lorem ipsum dolor sit amet consectetur
           </p>
         </div>
-        <motion.div className="sticky top-0 h-[100vh] bg-white" style={{ opacity: opacity }}>
-
+        <motion.div className="sticky top-0 h-[100vh] bg-black">
+          <div className="h-full w-full relative">
+            <motion.div
+              className="absolute inset-0"
+              style={{ opacity: opacity }}
+            >
+              <Image
+                src={girl}
+                alt="girl"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <motion.div className="absolute inset-0 flex justify-center items-center" style={{opacity: textOpacity}}>
+              <p className="font-edu-hand text-white text-lg max-w-[75%]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, provident? Molestiae perspiciatis voluptatibus quibusdam sit, maxime similique! Necessitatibus doloremque cupiditate voluptates. Minus assumenda sit, quis repellendus a vitae est distinctio!
+              </p>
+            </motion.div>
+          </div>
+          <h1>Thanks</h1>
         </motion.div>
 
       </div>
