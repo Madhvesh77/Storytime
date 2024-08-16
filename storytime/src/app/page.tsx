@@ -49,15 +49,15 @@ export default function Home() {
       <Scene3 />
 
       <div ref={ref} className="bg-black h-[300vh] mt-5">
-        <div className="flex justify-center items-center flex-col gap-5 h-[20%] ">  
-        <p className="max-w-[75%] font-edu-hand text-3xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat in assumenda minima, laudantium quibusdam tempore
-        </p>
-        <p className="max-w-[75%] font-edu-hand text-4xl font-extrabold">
-          Lorem ipsum dolor sit amet consectetur
-        </p>
+        <div className="flex justify-center items-center flex-col gap-5 h-[20%] ">
+          <p className="max-w-[75%] font-edu-hand text-3xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat in assumenda minima, laudantium quibusdam tempore
+          </p>
+          <p className="max-w-[75%] font-edu-hand text-4xl font-extrabold">
+            Lorem ipsum dolor sit amet consectetur
+          </p>
         </div>
-        <motion.div className="sticky top-0 h-[100vh] bg-white" style={{opacity: opacity}}>
+        <motion.div className="sticky top-0 h-[100vh] bg-white" style={{ opacity: opacity }}>
 
         </motion.div>
 
