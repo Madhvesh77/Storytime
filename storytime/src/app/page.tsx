@@ -22,8 +22,11 @@ export default function Home() {
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const opacity = useTransform(scrollYProgress, [0.8, 0.9], [0, 2]);
-  const disappearOpacity = useTransform(scrollYProgress, [0.9, 0.9], [2, 0]);
+  const opacity = useTransform(scrollYProgress, [0.6, 0.7, 1], [0, 2, 0]);
+  let boyDrownAnimation;
+    if (typeof window !== "undefined") {
+        boyDrownAnimation = useTransform(scrollYProgress, [0.8, 0.9], [0, window.innerWidth/2]);
+    }
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const handleMouseMove = (event: any) => {
     const { clientX: cursorX, clientY: cursorY, currentTarget } = event;
@@ -95,7 +98,7 @@ export default function Home() {
               className="w-full h-full"
             />
           </motion.div>
-          <motion.div className="absolute inset-0 flex justify-center mt-[15%]">
+          <motion.div className="absolute inset-0 flex justify-center items-start" style={{y: boyDrownAnimation}}>
             <Image
               src={boy}
               alt="boy"
