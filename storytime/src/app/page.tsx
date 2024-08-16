@@ -24,9 +24,9 @@ export default function Home() {
   const { scrollYProgress } = useScroll({ target: ref });
   const opacity = useTransform(scrollYProgress, [0.6, 0.7, 1], [0, 2, 0]);
   let boyDrownAnimation;
-    if (typeof window !== "undefined") {
-        boyDrownAnimation = useTransform(scrollYProgress, [0.8, 0.9], [0, window.innerWidth/2]);
-    }
+  if (typeof window !== "undefined") {
+    boyDrownAnimation = useTransform(scrollYProgress, [0.8, 0.9], [0, window.innerWidth / 2]);
+  }
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const handleMouseMove = (event: any) => {
     const { clientX: cursorX, clientY: cursorY, currentTarget } = event;
@@ -78,7 +78,7 @@ export default function Home() {
           }}
         >
           <div className="absolute inset-0">
-          <Image
+            <Image
               src={water}
               alt="water"
               className="w-full h-full"
@@ -98,18 +98,16 @@ export default function Home() {
               className="w-full h-full"
             />
           </motion.div>
-          <motion.div className="absolute inset-0 flex justify-center items-start" style={{y: boyDrownAnimation}}>
+          <motion.div className="absolute inset-0 flex justify-center items-start" style={{ y: boyDrownAnimation }}>
             <Image
               src={boy}
               alt="boy"
               className="w-auto h-[20vh]"
-              />
-              </motion.div>
-          <motion.div className="absolute inset-0 ml-[10%] mr-[10%] flex items-center" style={{opacity: opacity}}>
+            />
+          </motion.div>
+          <motion.div className="absolute inset-0 ml-[10%] mr-[10%] flex items-center" style={{ opacity: opacity }}>
             <p className="w-full flex justify-center items-center text-lg font-edu-hand">
-            One sweltering afternoon, with the sun beating down on the dusty earth, Madhav decided he wanted to play by the pond. It was a small, secluded spot, shaded by a canopy of trees, and a favorite of the village children. But on this day, it was eerily quiet. The water shimmered invitingly, and despite knowing he couldn’t swim, Madhav couldn’t resist wading in.
-At first, it was fun—feeling the cool water lap against his skin—but the pond was deeper than he realized. Before he knew it, he was in over his head. Panic set in as he thrashed about, trying to keep his head above water, but the more he struggled, the more he sank. He gasped for air, his limbs growing heavy, the world around him a blur of water and fear.
-
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quisquam impedit officiis, iure maiores explicabo quasi dolore sint quidem minima cum neque doloremque corporis fuga blanditiis, adipisci praesentium numquam atque.
             </p>
           </motion.div>
         </motion.div>
