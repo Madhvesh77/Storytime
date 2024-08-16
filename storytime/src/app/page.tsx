@@ -42,6 +42,9 @@ export default function Home() {
       <Scene1 />
       <Scene2 />
       <Scene3 />
+      <div className="bg-white h-[100vh]">
+
+      </div>
     </main>
   )
 }
