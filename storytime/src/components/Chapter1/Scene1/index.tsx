@@ -13,7 +13,10 @@ export default function Scene1() {
     const { scrollYProgress } = useScroll({ target: ref });
 
     const sunOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    const leafXProgress = useTransform(scrollYProgress, [0, 2], [0, window.innerWidth - 100]);
+    let leafXProgress;
+    if (typeof window !== "undefined") {
+        leafXProgress = useTransform(scrollYProgress, [0, 2], [0, window.innerWidth - 100]);
+    }
     return (
         <div className="h-[100vh] bg-white">
             <motion.div className="sticky top-0 h-[100vh]" >

@@ -13,7 +13,7 @@ export default function Scene2() {
     const textOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
     return (
         <div ref={ref} className="h-[300vh] bg-black mt-28">
-            <div className="sticky top-0 h-[200vh]">
+            <div className="sticky top-0 h-[180vh]">
                 <motion.div className="relative">
                     <motion.div style={{ scale: zoom, opacity, transformOrigin: '70% 70%' }}>
                         <Image
