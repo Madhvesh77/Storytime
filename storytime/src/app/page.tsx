@@ -71,13 +71,17 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </motion.div>
-            <motion.div className="absolute inset-0 flex justify-center items-center" style={{opacity: textOpacity}}>
+            <motion.div className="absolute inset-0 flex justify-center items-center" style={{ opacity: textOpacity }}>
               <p className="font-edu-hand text-white text-lg max-w-[75%]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, provident? Molestiae perspiciatis voluptatibus quibusdam sit, maxime similique! Necessitatibus doloremque cupiditate voluptates. Minus assumenda sit, quis repellendus a vitae est distinctio!
               </p>
             </motion.div>
           </div>
-          <h1>Thanks</h1>
+          <div className="flex justify-center items-center w-full h-full">
+            <p className="font-edu-hand text-lg max-w-[75%]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis impedit quia unde cum ad labore quos enim. Laboriosam optio vitae saepe, ad consequatur eos placeat minima ipsum incidunt nam.
+            </p>
+          </div>
         </motion.div>
 
       </div>
