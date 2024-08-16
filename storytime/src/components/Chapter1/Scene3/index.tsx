@@ -6,7 +6,7 @@ import boy from "../../../../public/Boy.png"
 export default function Scene3() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
-    const opacity = useTransform(scrollYProgress, [0.6, 0.7, 1], [0, 2, 0]);
+    const opacity = useTransform(scrollYProgress, [0.8, 0.9, 1], [0, 2, 0]);
     let boyDrownAnimation;
     if (typeof window !== "undefined") {
         boyDrownAnimation = useTransform(scrollYProgress, [0.8, 0.9], [0, window.innerWidth / 2]);
