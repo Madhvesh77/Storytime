@@ -3,12 +3,13 @@ import TitleCardAndPlot from "@/components/TitleCardAndPlot";
 import Image from "next/image";
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
-import { useState } from "react";
+import { useRef, useState } from "react";
 import map from "../../public/Map.png";
 import opening from "../../public/Opening.png";
 import Scene1 from "@/components/Chapter1/Scene1";
 import Scene2 from "@/components/Chapter1/Scene2";
 import Scene3 from "@/components/Chapter1/Scene3";
+import { useScroll } from "framer-motion";
 
 export default function Home() {
   const plot = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?"
@@ -17,6 +18,10 @@ export default function Home() {
   const handleClick = (() => {
     setIsDialogOpen(true);
   })
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  
 
   return (
     <main className=" mb-[100vh]">
@@ -42,7 +47,11 @@ export default function Home() {
       <Scene1 />
       <Scene2 />
       <Scene3 />
-      <div className="bg-white h-[100vh]">
+
+      <div ref={ref} className="bg-green-300 h-[100vh] mt-5">
+        <div className="sticky top-0 h-[100vh] bg-white">
+
+        </div>
 
       </div>
     </main>

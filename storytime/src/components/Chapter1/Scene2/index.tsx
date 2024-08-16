@@ -9,11 +9,11 @@ export default function Scene2() {
     const zoom = useTransform(scrollYProgress, [0, 0.2], [1, 4]);
     const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
     const revOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
-    const moveLeft = useTransform(scrollYProgress, [0, 0.5], [0, -2000])
+    const moveLeft = useTransform(scrollYProgress, [0, 0.9], [0, -2000])
     const textOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
     return (
         <div ref={ref} className="h-[300vh] bg-black mt-28">
-            <div className="sticky top-0 h-[180vh]">
+            <div className="sticky top-0 h-[130vh]">
                 <motion.div className="relative">
                     <motion.div style={{ scale: zoom, opacity, transformOrigin: '70% 70%' }}>
                         <Image
