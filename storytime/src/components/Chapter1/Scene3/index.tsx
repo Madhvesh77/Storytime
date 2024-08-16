@@ -6,10 +6,10 @@ import boy from "../../../../public/Boy.png"
 export default function Scene3() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
-    const opacity = useTransform(scrollYProgress, [0.7, 0.8, 0.9], [0, 2, 0]);
+    const opacity = useTransform(scrollYProgress, [0.5, 0.7, 0.9], [0, 2, 0]);
     let boyDrownAnimation;
     if (typeof window !== "undefined") {
-        boyDrownAnimation = useTransform(scrollYProgress, [0.7, 0.8], [0, window.innerWidth / 2]);
+        boyDrownAnimation = useTransform(scrollYProgress, [0.5, 0.8], [0, window.innerWidth / 2]);
     }
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const handleMouseMove = (event: any) => {

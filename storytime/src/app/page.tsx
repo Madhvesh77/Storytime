@@ -9,7 +9,7 @@ import opening from "../../public/Opening.png";
 import Scene1 from "@/components/Chapter1/Scene1";
 import Scene2 from "@/components/Chapter1/Scene2";
 import Scene3 from "@/components/Chapter1/Scene3";
-import { useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
   const plot = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?"
@@ -21,7 +21,7 @@ export default function Home() {
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  
+  const opacity = useTransform(scrollYProgress, [0.3, 1], [0, 2]);
 
   return (
     <main className=" mb-[100vh]">
@@ -48,10 +48,18 @@ export default function Home() {
       <Scene2 />
       <Scene3 />
 
-      <div ref={ref} className="bg-green-300 h-[100vh] mt-5">
-        <div className="sticky top-0 h-[100vh] bg-white">
-
+      <div ref={ref} className="bg-black h-[300vh] mt-5">
+        <div className="flex justify-center items-center flex-col gap-5 h-[20%] ">  
+        <p className="max-w-[75%] font-edu-hand text-3xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat in assumenda minima, laudantium quibusdam tempore
+        </p>
+        <p className="max-w-[75%] font-edu-hand text-4xl font-extrabold">
+          Lorem ipsum dolor sit amet consectetur
+        </p>
         </div>
+        <motion.div className="sticky top-0 h-[100vh] bg-white" style={{opacity: opacity}}>
+
+        </motion.div>
 
       </div>
     </main>
