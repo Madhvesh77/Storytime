@@ -1,15 +1,10 @@
 'use client'
-import TitleCardAndPlot from "@/components/TitleCardAndPlot";
+import Chapter1 from "@/components/Chapter1";
 import Image from "next/image";
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { useState } from "react";
 import map from "../../public/Map.png";
-import opening from "../../public/Opening.png";
-import Scene1 from "@/components/Chapter1/Scene1";
-import Scene2 from "@/components/Chapter1/Scene2";
-import Scene3 from "@/components/Chapter1/Scene3";
-import Scene4 from "@/components/Chapter1/Scene4";
 
 export default function Home() {
   const plot = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi rem sed commodi cumque accusamus molestiae, sequi ullam accusantium modi, facere tenetur fuga eos cum nisi maiores, ad saepe aspernatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, aliquam. Libero excepturi eaque, eius velit est repellendus fugiat dolores voluptatem quia, adipisci, officiis ad cupiditate blanditiis nostrum aut delectus illum?"
@@ -39,11 +34,7 @@ export default function Home() {
             className="w-full h-full" />
         </div>
       </Dialog>
-      <TitleCardAndPlot image={opening} paragraph={plot} />
-      <Scene1 />
-      <Scene2 />
-      <Scene3 />
-      <Scene4 />
+      <Chapter1 />
     </main>
   )
 }
