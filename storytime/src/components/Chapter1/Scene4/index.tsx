@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import girl from "../../../../public/GirlBlur.png";
+import girl from "../../../../public/Chapter1/Scene4/GirlBlur.png";
 
 export default function Scene4() {
     const ref = useRef(null);
