@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import war from "../../../../public/War.png";
-import map from "../../../../public/Map.png"
+import war from "../../../../public/Chapter1/Scene2/War.png";
+import map from "../../../../public/Chapter1/Scene2/Map.png"
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 export default function Scene2() {
