@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import water from "../../../../public/water.jpg";
-import boy from "../../../../public/Boy.png"
+import water from "../../../../public/Chapter1/Scene3/water.jpg";
+import boy from "../../../../public/Chapter1/Scene3/Boy.png"
 export default function Scene3() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
