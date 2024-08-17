@@ -7,16 +7,18 @@ import leaf from "../../../../public/LeafBlack.png";
 import sunsetBg from "../../../../public/SunsetBgNoSun.jpeg";
 import sun from "../../../../public/Sun2.png";
 import children from "../../../../public/SunsetChildren.png";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 export default function Scene1() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
-
     const sunOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    let leafXProgress;
-    if (typeof window !== "undefined") {
-        leafXProgress = useTransform(scrollYProgress, [0, 2], [0, window.innerWidth - 100]);
-    }
+    const [outputRange, setOutputRange] = useState([0, 1000]);
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setOutputRange([0, window.innerWidth - 100]);
+        }
+    }, [scrollYProgress]);
+    const leafXProgress = useTransform(scrollYProgress, [0, 2], outputRange);
     return (
         <div className="h-[100vh] bg-white">
             <motion.div className="sticky top-0 h-[100vh]" >
