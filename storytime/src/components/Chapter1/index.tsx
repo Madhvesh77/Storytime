@@ -1,5 +1,5 @@
 import TitleCardAndPlot from "../TitleCardAndPlot";
-import opening from "../../../public/Opening.png"
+import opening from "../../../public/Chapter1/TitleCard/Opening.png"
 import Scene1 from "./Scene1";
 import Scene2 from "./Scene2";
 import Scene3 from "./Scene3";

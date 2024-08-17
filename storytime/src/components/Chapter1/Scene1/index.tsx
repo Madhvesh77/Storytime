@@ -1,12 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import black from "../../../../public/BlackBase.png";
-import leftHill from "../../../../public/Hill4Black.png";
-import rightHill from "../../../../public/Hill5Black.png";
-import leaf from "../../../../public/LeafBlack.png";
-import sunsetBg from "../../../../public/SunsetBgNoSun.jpeg";
-import sun from "../../../../public/Sun2.png";
-import children from "../../../../public/SunsetChildren.png";
+import black from "../../../../public/Chapter1/Scene1/BlackBase.png";
+import leftHill from "../../../../public/Chapter1/Scene1/Hill4Black.png";
+import rightHill from "../../../../public/Chapter1/Scene1/Hill5Black.png";
+import leaf from "../../../../public/Chapter1/Scene1/LeafBlack.png";
+import sunsetBg from "../../../../public/Chapter1/Scene1/SunsetBgNoSun.jpeg";
+import sun from "../../../../public/Chapter1/Scene1/Sun2.png";
+import children from "../../../../public/Chapter1/Scene1/SunsetChildren.png";
 import { useEffect, useRef, useState } from "react";
 export default function Scene1() {
     const ref = useRef(null);
