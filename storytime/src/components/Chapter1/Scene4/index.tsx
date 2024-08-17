@@ -8,6 +8,7 @@ export default function Scene4() {
     const { scrollYProgress } = useScroll({ target: ref });
     const opacity = useTransform(scrollYProgress, [0.3, 0.7, 1], [0, 0.5, 0]);
     const textOpacity = useTransform(scrollYProgress, [0.3, 0.7, 1], [0, 2, 0]);
+    const finalTextOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
     return (
         <div ref={ref} className="bg-black h-[300vh] mt-5">
             <div className="flex justify-center items-center flex-col gap-5 h-[20%]">
@@ -35,11 +36,11 @@ export default function Scene4() {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, provident? Molestiae perspiciatis voluptatibus quibusdam sit, maxime similique! Necessitatibus doloremque cupiditate voluptates. Minus assumenda sit, quis repellendus a vitae est distinctio!
                         </p>
                     </motion.div>
-                </div>
-                <div className="flex justify-center items-center w-full h-full">
-                    <p className="font-edu-hand text-lg max-w-[75%]">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis impedit quia unde cum ad labore quos enim. Laboriosam optio vitae saepe, ad consequatur eos placeat minima ipsum incidunt nam.
-                    </p>
+                    <motion.div className="flex justify-center items-center w-full h-full" style={{opacity: finalTextOpacity}}>
+                        <p className="font-edu-hand text-lg max-w-[75%]">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis impedit quia unde cum ad labore quos enim. Laboriosam optio vitae saepe, ad consequatur eos placeat minima ipsum incidunt nam.
+                        </p>
+                    </motion.div>
                 </div>
             </motion.div>
         </div>
