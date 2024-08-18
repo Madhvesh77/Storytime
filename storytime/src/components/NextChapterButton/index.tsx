@@ -8,7 +8,7 @@ export default function NextChapterButton({nextPage} : {nextPage: string}) {
     return (
         <div className="w-full flex justify-center items-center pb-10">
             <Button className="bg-black hover:bg-gray-800 rounded-full" onClick={(() => router.push(nextPage))}>
-                <Image alt="logo" src={next} className="h-10 w-10 hover:rotate-90" />
+                <Image alt="logo" src={next} className="h-10 w-10 hover:animate-spin" />
             </Button>
         </div>
     )
