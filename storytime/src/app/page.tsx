@@ -5,7 +5,6 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { useState } from "react";
 import map from "../../public/Map.png";
-import next from "../../public/logo192.png"
 import NextChapterButton from "@/components/NextChapterButton";
 
 export default function Home() {
