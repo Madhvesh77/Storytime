@@ -6,6 +6,7 @@ import { Dialog } from 'primereact/dialog';
 import { useState } from "react";
 import map from "../../public/Map.png";
 import next from "../../public/logo192.png"
+import NextChapterButton from "@/components/NextChapterButton";
 
 export default function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -35,11 +36,7 @@ export default function Home() {
         </div>
       </Dialog>
       <Chapter1 />
-      <div className="w-full flex justify-center items-center pb-10">
-        <Button className="bg-black hover:bg-gray-800 rounded-full">
-          <Image alt="logo" src={next} className="h-10 w-10 hover:rotate-90" />
-        </Button>
-      </div>
+      <NextChapterButton />
     </main>
   )
 }
