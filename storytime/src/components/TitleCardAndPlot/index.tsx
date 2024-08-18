@@ -17,7 +17,7 @@ export default function TitleCardAndPlot({image, paragraph}:{image: any; paragra
       const plotDivAppearOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
-    <div ref={container} className="flex justify-center font-semibold text-6xl md:text-9xl h-[150vh] md:h-[200vh] -mb-0">
+    <div ref={container} className="flex justify-center font-semibold text-6xl md:text-9xl h-[200vh] md:h-[200vh] -mb-0">
             <div className="sticky top-0 h-[100vh] bg-black overflow-hidden">
                 <motion.div style={{ scale: bgImageZoom }} className="relative h-[100vh]">
                     <motion.div style={{ opacity: bgImageOpacity }}>
