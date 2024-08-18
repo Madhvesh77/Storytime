@@ -1,20 +1,8 @@
 'use client'
-import { useEffect, useRef } from 'react';
-import Lenis from '@studio-freight/lenis'
+import { useRef } from 'react';
 import { useScroll, useTransform, motion, animate } from 'framer-motion';
 import Image from 'next/image';
 export default function TitleCardAndPlot({image, paragraph}:{image: any; paragraph: string}) {
-
-    // useEffect(() => {
-    //     const lenis = new Lenis()
-    
-    //     function raf(time: any) {
-    //       lenis.raf(time)
-    //       requestAnimationFrame(raf)
-    //     }
-    
-    //     requestAnimationFrame(raf)
-    //   }, [])
     
       const container = useRef(null);
     
