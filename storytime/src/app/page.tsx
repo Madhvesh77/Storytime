@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </Dialog>
       <Chapter1 />
-      <NextChapterButton />
+      <NextChapterButton nextPage="Chapter2"/>
     </main>
   )
 }
