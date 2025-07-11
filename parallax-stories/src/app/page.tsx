@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className="flex items-center justify-center h-screen bg-black">
       <h1 ref={textRef} className="text-white text-4xl font-bold">
-        Hello World
+        Hello Madhvesh
       </h1>
     </main>
   );
