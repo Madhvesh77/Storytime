@@ -27,7 +27,7 @@ export default function LandingPage() {
 
       <div ref={containerRef}>
         {/* Use the new component from Step 4 */}
-        <StoryButton title="Story 1" href="/story-one" />
+        <StoryButton title="Story 1" href="/stories/seen" />
         {/* Example of a second story button */}
         {/* <StoryButton title="Story 2" href="/story-two" /> */}
       </div>
